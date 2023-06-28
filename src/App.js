@@ -8,6 +8,7 @@ import ProjectSection from "./components/ProjectSection";
 import SkillSection from "./components/SkillSection";
 import RecommendationSection from "./components/RecommendationSection";
 import Contact from "./components/Contact";
+import BlogSection from "./components/BlogSection";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <SkillSection />
       <ProjectSection />
       <About />
+      <BlogSection />
+
       <Contact />
       <Footer />
     </div>

@@ -31,7 +31,7 @@ function ProjectSection() {
             </h1>
 
             <div className="lead">
-                I build products, just like this website
+                I build projects, just like this website
             </div>
 
             <div className="row my-5 pt-3">

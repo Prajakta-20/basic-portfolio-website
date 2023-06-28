@@ -2,18 +2,28 @@ import React, { Component } from "react";
 
 class Contact extends Component {
 
-    constructor() {
-        super();
+    // constructor() {
+    //     super();
 
-        this.state = {
-            name: "",
-            email: "",
-            description: "",
-            submitMessage: "",
-            submitMessageTextColor: "",
-        };
+    //     this.state = {
+    //         name: "",
+    //         email: "",
+    //         description: "",
+    //         submitMessage: "",
+    //         submitMessageTextColor: "",
+    //     };
 
-    }
+    // }
+    //  ---- OR ----
+
+    state = {
+        name: "",
+        email: "",
+        description: "",
+        submitMessage: "",
+        submitMessageTextColor: "",
+    };
+
 
     onChange = (event) => {
         this.setState({
@@ -22,6 +32,8 @@ class Contact extends Component {
     };
 
     onSubmit = (event) => {
+        event.preventDefault();
+
         let isSuccessful = true;
         const { name } = this.state;
 
@@ -39,6 +51,9 @@ class Contact extends Component {
     }
 
     render() {
+
+        const { submitMessage, submitMessageTextColor } = this.state;
+
         return (
             <div className="container my-5">
                 <h1 className="font-weight-light text-center py-5">
@@ -68,7 +83,7 @@ class Contact extends Component {
                 </div>
 
                 <div className="text-center mx-2 py-5">
-
+                    <h5 className={submitMessageTextColor}>{submitMessage}</h5>
                 </div>
             </div>
         );
